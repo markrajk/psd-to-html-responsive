@@ -1,0 +1,408 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 62.5%; */
+    font-size: 55%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient( rgba(25, 225, 115, .7), rgba(25, 225, 115, .7)), url(../../img/design-tools.jpg);
+
+}
+
+header {
+    padding: 1.3rem;
+    height: 6rem;
+    width: 100%;
+    background-color: #fff;
+    transition: height .3s ease-in;
+    touch-action: pan-x;
+}
+
+.main--container--head {
+    padding: 0 2rem;
+}
+
+.main {
+    padding: 0 2rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-pic--1 {
+    width: 3.5rem;
+}
+.logo-pic--2 {
+    display: none;
+    width: 15rem;
+}
+
+
+
+.nav--list--item {
+    display: none;
+    font-size: 1.8rem;
+    margin: 0 2rem;
+}
+
+.dropdown--list {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    background-color: #fff;
+    transition: all .3s ease-in;
+}
+
+.activate {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    touch-action: none;
+}
+
+
+.dropdown--list li {
+    visibility: hidden;
+    text-decoration: none;
+    opacity: 0;
+    list-style: none;
+    font-size: 2.5rem;
+    margin: 2rem 3rem;
+    transition: all .2s ease-in;
+
+}
+
+.activate-links {
+    visibility: visible!important;
+    opacity: 1!important;
+
+}
+
+hr {
+    opacity: 0;
+    width: 200px;
+    margin: 0 auto;
+    transition: all .2s ease-in;
+}
+
+.dropdown--list--link,
+.dropdown--list--link:active,
+.dropdown--list--link:visited {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav--list--item:last-child {
+    display: inline-block;
+}
+
+.nav--list--link,
+.nav--list--link:active,
+.nav--list--link:visited {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#link--4,
+#link--4:active,
+#link--4,:visited {
+    color: rgb(25, 225, 115);
+
+}
+
+
+.burger {
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+
+}
+
+.burger--top,
+.burger--middle,
+.burger--bottom {
+    position: absolute;
+    width: 4.5rem;
+    height: 4px;
+    background-color: #999;
+    transition: all .3s ease-out;
+}
+
+.burger--top {
+    top: 15%;
+}
+
+.burger--middle {
+    top: 40%;
+}
+
+.burger--bottom {
+    top: 65%;
+}
+
+.text--segment {
+    padding: 5rem 0;
+    color: #fff;
+}
+
+.text--h {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.text--p {
+    font-size: 2rem;
+}
+
+.form--segment {
+    z-index: 100;
+    background-color: #fff;
+}
+
+.form--header {
+    padding: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(130, 90, 190);
+}
+
+.form--input--container {
+    padding: 2rem 3rem;
+}
+
+.form--input--1,
+.form--input--2,
+.form--input--3,
+.form--input--4 {
+    width: 100%;
+}
+
+.form--segment div {
+    margin-bottom: 2rem;
+}
+
+.form--segment label {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: .6rem;
+}
+
+.form--segment input,
+.form--segment input:focus {
+    outline: none;
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 2px solid rgb(200, 200, 200);
+}
+
+.form--button {
+    width: 100%;
+}
+
+.btn,
+.btn:active {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgb(25, 225, 115);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: rgb(55, 255, 145);
+}
+
+.arrow-container {
+    display: inline-block;
+    position: relative;
+}
+.right-arrow {
+    position: absolute;
+    transform: translate(100%, 55%);
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: #fff;
+
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+
+
+
+/* MEDIA QUERIES*/
+
+@media only screen and (min-width: 900px) {
+    
+    .main--container--head {
+        padding: 0 5rem;
+    }
+    
+    .main{
+        padding: 5rem;
+    }
+    .form--input--container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .nav--list--item:nth-of-type(3) {
+        display: inline-block;
+    }
+    #dropdown--3 {
+        display: none!important;
+    }
+    hr:nth-of-type(3){
+        display: none!important;
+    }
+
+    .form--input--1,
+    .form--input--2,
+    .form--input--3,
+    .form--input--4 {
+        width: 40%;
+    }
+
+    .text--segment {
+        margin-bottom: 4rem;
+    }
+
+    .form--segment {
+        padding: 0rem;
+    }
+
+    .form--button {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .dropdown--list {
+        display: none; 
+    }
+    
+    .activate {
+        height: 50px;
+        z-index: 1000;
+    }
+
+    .main--container--head {
+        padding: 0 7rem;
+    }
+
+    .main {
+        padding: 10rem 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    body {
+        z-index: 500;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+    .nav--list--item {
+        display: inline-block;
+    }
+
+    .logo-pic--1 {
+        display: none;
+    }
+
+    .logo-pic--2 {
+        display: inline-block;
+    }
+
+    .text--segment {
+        padding-right: 3rem;
+        width: 45%;
+    }
+
+    .form--segment {
+        width: 55%;
+    }
+
+    .form--input--container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .form--input--1,
+    .form--input--2,
+    .form--input--3,
+    .form--input--4 {
+        width: 40%;
+    }
+
+    .form--button {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .main--container--head {
+        padding: 0 16rem;
+    }
+
+    .main {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 16rem;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
